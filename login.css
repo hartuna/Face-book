@@ -1,0 +1,71 @@
+@charset 'utf-8';
+*{
+	box-sizing: border-box;
+	font-family: 'Verdana';
+	margin: 0px;
+	padding: 0px;
+}
+body{
+	background-color: #eaeaea;
+}
+#wrapper{
+	background-color: #6080c0;
+	background: linear-gradient(#305090, #6080c0);
+	bottom: 0;
+	height: 234px;
+	left: 0; 
+	margin: auto;
+	position: absolute;
+	right: 0; 
+	top: 0;
+	width: 100%;
+}
+#logOn{
+	margin: 0px auto;
+	height: 100%;
+	width: 574px;
+}
+#logo{
+	float: left;
+	height: 234px;
+	width: 234px;
+}
+#data{
+	float: left;
+	height: 234px;
+	padding: 20px;
+	width: 340px;
+}
+label, input{
+	border: none;
+	border-radius: 4px;
+	display: block;
+	margin: 5px 0px;
+	outline: none;
+}
+label{
+	color: white;
+	height: 22px;
+	padding-left: 10px;
+}
+input{
+	background-color: rgba(255, 255, 255, 0.2);
+	color: #fff;
+	height: 30px;
+	padding: 0px 10px;
+	width: 300px;
+}
+#button{
+	border: 1px solid rgba(255, 255, 255, 0.4);
+	background-color: #5070b0;
+	color: #fff;
+	float: right;
+	font-size: 16px;
+	height: 40px;
+	margin-top: 10px;
+	width: 120px;
+}
+#button:hover{
+	cursor: pointer;
+	background-color: #6080c0;
+}
