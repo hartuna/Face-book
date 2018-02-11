@@ -47,6 +47,18 @@ body{
 	p:last-child{
 		font-size: 18px;
 	}
+	#table{
+		border-radius: 6px;
+		height: 510px;
+		width: 400px;
+	}
+	#table table{
+		height: 440px;
+		margin: 60px auto 10px auto;	
+	}
+	tr{
+		height: 36px;
+	}
 }
 @media all and (max-width: 699px){
 	#wrapper{
@@ -86,6 +98,17 @@ body{
 	}
 	p:last-child{
 		font-size: 15px;
+	}
+	#table{
+		height: 444px;
+		width: 100%;
+	}
+	#table table{
+		height: 363px;
+		margin: 60px auto 17px auto;	
+	}
+	tr{
+		height: 29px;
 	}
 }
 #wrapper{
@@ -138,7 +161,7 @@ input{
 	height: 40px;
 	width: 120px;
 }
-#button:hover{
+#button:hover, #close:hover{
 	cursor: pointer;
 	background-color: #6080c0;
 }
@@ -153,8 +176,59 @@ input{
 	color: #fff;
 	text-align: center;
 }
-#bottom a{
+#openUsers{
 	color: #305090;
 	font-weight: bold;
 	text-decoration: none;
 }
+#openUsers:hover{
+	color: #5070b0;
+	cursor: pointer;
+}
+#users{
+	background-color: rgba(0, 0, 0, 0.8);
+	display: none;
+
+	height: 100%;
+	position: fixed;
+	width: 100%;
+}
+#table{
+	background-color: rgba(255, 255, 255, 0.8);
+	bottom: 0;
+	left: 0; 
+	margin: auto;
+	position: absolute;
+	right: 0; 
+	top: 0;
+}
+#close{
+	background-color: #5070b0;
+	border: none;
+	border-radius: 4px;
+	color: #fff;
+	height: 40px;
+	outline: none;
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	width: 60px;
+}
+#table table{
+	border-spacing: 2px;
+	width: 90%;
+}
+th{
+	background-color: #444;
+	color: #fff;
+}
+td{
+	background-color: #fff;
+}
+th, td{
+	padding: 0px 10px;
+	text-align: left;
+}
+
+
+
