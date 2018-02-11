@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Facebook</title>
+	<title>Social-network</title>
 	<meta charset="utf-8" />
 	<link href="login.css" rel="stylesheet" type="text/css" media="all" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
 </head>
 <body>
 	<div id="wrapper">
@@ -17,6 +18,10 @@
 				<input id="button" type="submit" name="logOn" value="Zaloguj" />
 			</div>
 		</form>
+		<div id="bottom">
+			<p>Aplikacja powstała w celach edukacyjnych</p>
+			<p>Przykładowe dane znajdziesz <a href="#">tutaj</a></p>
+		</div>
 	</div>
 </body>
 </html>

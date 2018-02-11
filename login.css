@@ -8,11 +8,90 @@
 body{
 	background-color: #eaeaea;
 }
+@media all and (min-width: 700px){
+	#wrapper{
+		height: 294px;
+	}
+	#logOn{
+		height: 234px;
+		width: 574px;
+	}
+	#logo{
+		height: 234px;
+		width: 234px;
+	}
+	#data{
+		height: 234px;
+		padding: 20px;
+		width: 340px;
+	}
+	label{
+		padding-left: 10px;
+	}
+	input{
+		width: 300px;
+	}
+	#button{
+		float: right;
+		margin-top: 10px;
+	}
+	#bottom{
+		height: 60px;
+	}
+	#bottom p{
+		line-height: 30px;
+	}
+	p:first-child{
+		font-size: 15px;
+	}
+	p:last-child{
+		font-size: 18px;
+	}
+}
+@media all and (max-width: 699px){
+	#wrapper{
+		height: 444px;	
+	}
+	#logOn{
+		height: 384px;
+		width: 300px;
+	}
+	#logo{
+		height: 140px;
+		margin: 20px 80px 0px 80px;
+		width: 140px;
+	}
+	#data{
+		height: 234px;
+		padding: 20px;
+		width: 300px;
+	}
+	label{
+		text-align: center;
+	}
+	input{
+		width: 260px;
+	}
+	#button{
+		margin: 10px auto;
+	}
+	#bottom{
+		height: 50px;
+	}
+	#bottom p{
+		line-height: 25px;
+	}
+	p:first-child{
+		font-size: 12px;
+	}
+	p:last-child{
+		font-size: 15px;
+	}
+}
 #wrapper{
 	background-color: #6080c0;
 	background: linear-gradient(#305090, #6080c0);
 	bottom: 0;
-	height: 234px;
 	left: 0; 
 	margin: auto;
 	position: absolute;
@@ -20,21 +99,19 @@ body{
 	top: 0;
 	width: 100%;
 }
+@media all and (max-height: 444px){
+	#wrapper{
+		position: static;
+	}
+}
 #logOn{
 	margin: 0px auto;
-	height: 100%;
-	width: 574px;
 }
 #logo{
 	float: left;
-	height: 234px;
-	width: 234px;
 }
 #data{
 	float: left;
-	height: 234px;
-	padding: 20px;
-	width: 340px;
 }
 label, input{
 	border: none;
@@ -46,26 +123,37 @@ label, input{
 label{
 	color: white;
 	height: 22px;
-	padding-left: 10px;
 }
 input{
 	background-color: rgba(255, 255, 255, 0.2);
 	color: #fff;
 	height: 30px;
 	padding: 0px 10px;
-	width: 300px;
 }
 #button{
 	border: 1px solid rgba(255, 255, 255, 0.4);
 	background-color: #5070b0;
 	color: #fff;
-	float: right;
 	font-size: 16px;
 	height: 40px;
-	margin-top: 10px;
 	width: 120px;
 }
 #button:hover{
 	cursor: pointer;
 	background-color: #6080c0;
+}
+#bottom{
+	clear: both;
+	background-color: rgba(255, 255, 255, 0.2);
+	border-top: 1px solid rgba(255, 255, 255, 0.8);
+	width: 100%;
+}
+#bottom p{
+	color: #fff;
+	text-align: center;
+}
+#bottom a{
+	color: #305090;
+	font-weight: bold;
+	text-decoration: none;
 }
