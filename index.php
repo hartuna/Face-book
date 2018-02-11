@@ -1,3 +1,10 @@
+<?php
+	session_start();
+	if(isset($_SESSION['online']) && $_SESSION['online'] == true){
+		header('Location: /social-network/panel/index.php');
+		exit();
+	}
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,10 +19,10 @@
 			<img id="logo" src="image/logo.png" alt="logo" />
 			<div id="data">
 				<label for="login">Nazwa użytkownika</label>
-				<input type="text" name="login" />
+				<input type="text" name="login" <?php if(isset($_SESSION['login'])){ echo 'value="' . $_SESSION['login'] . '"'; } ?>>
 				<label for="password">Hasło</label>
-				<input type="password" name="password" />
-				<input id="button" type="submit" name="logOn" value="Zaloguj" />
+				<input type="password" name="password">
+				<input id="button" type="submit" name="logOn" value="Zaloguj">
 			</div>
 		</form>
 		<div id="bottom">
