@@ -15,6 +15,9 @@
 	<script src="login.js"></script>
 </head>
 <body>
+	<div id="error">
+		<p id="statement"><?php if(isset($_SESSION['error'])){ echo $_SESSION['error']; } ?></p>
+	</div>
 	<div id="wrapper">
 		<form id="logOn" method="POST" action="login.php">
 			<img id="logo" src="image/logo.png" alt="logo" />
@@ -39,46 +42,27 @@
 					<th>Login</th>
 					<th>Hasło</th>
 				</tr>
+				<?php
+					require_once 'connect.php';
+					$connect = @new mysqli($dbServer, $dbUser, $dbPassword, $dbName);
+					if(mysqli_connect_errno()){
+						echo 'Brak połączenia z bazą';
+					}
+					else{
+						$connect->query('set names "utf8" collate "utf8_polish_ci"');
+						$result = @$connect->query("SELECT * FROM Users LIMIT 10");
+						while($value = mysqli_fetch_array($result)){
+				?>
 				<tr>
-					<td>kowal</td>
-					<td>kowal123</td>
+					<td><?php echo $value['Login']; ?></td>
+					<td><?php echo $value['Password']; ?></td>
 				</tr>
-				<tr>
-					<td>kowal</td>
-					<td>kowal123</td>
-				</tr>
-				<tr>
-					<td>kowal</td>
-					<td>kowal123</td>
-				</tr>
-				<tr>
-					<td>kowal</td>
-					<td>kowal123</td>
-				</tr>
-				<tr>
-					<td>kowal</td>
-					<td>kowal123</td>
-				</tr>
-				<tr>
-					<td>kowal</td>
-					<td>kowal123</td>
-				</tr>
-				<tr>
-					<td>kowal</td>
-					<td>kowal123</td>
-				</tr>
-				<tr>
-					<td>kowal</td>
-					<td>kowal123</td>
-				</tr>
-				<tr>
-					<td>kowal</td>
-					<td>kowal123</td>
-				</tr>
-				<tr>
-					<td>kowal</td>
-					<td>kowal123</td>
-				</tr>
+				<?php
+						}
+						$result->close();
+						$connect->close();
+					}
+				?>
 			</table>
 		</div>
 	</div>

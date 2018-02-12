@@ -10,10 +10,14 @@
 <head>
 	<title>Social-network</title>
 	<meta charset="utf-8" />
-	<link href="login.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="default.css" rel="stylesheet" type="text/css" media="all" />
 </head>
 <body>
-	<p>Witaj <?php echo $_SESSION['user'] . ' ' . $_SESSION['userSurname']; ?></p>
-	<a href="logout.php"><button>Wyloguj</button></a>
+	<header>
+		<nav>
+			<p>Witaj <?php echo $_SESSION['user'] . ' ' . $_SESSION['userSurname']; ?></p>
+		</nav>
+		<a href="logout.php"><button></button></a>	
+	</header>
 </body>
 </html>
