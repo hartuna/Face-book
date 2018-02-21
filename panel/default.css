@@ -5,6 +5,10 @@
 	margin: 0px;
 	padding: 0px;
 }
+button{
+	border: none;
+	outline: none;
+}
 body{
 	background-color: #eaeaea;
 }
@@ -19,12 +23,10 @@ nav{
 header button{
 	background-color: rgba(255, 255, 255, 0.2);
 	background-size: 100%;
-	border: none;
 	border-radius: 4px;
 	float: right;
 	height: 50px;
 	margin: 5px;
-	outline: none;
 	width: 50px;
 }
 #logout{
@@ -66,4 +68,81 @@ h3{
 	height: 40px;
 	line-height: 40px;
 	padding: 0px 10px;
+}
+.person{
+	height: 80px;
+	margin: 5px auto;
+	width: 370px;
+}
+.person img{
+	background-color: #5070b0;
+	float: left;
+	height: 80px;
+	width: 80px;
+}
+.decision{
+	float: right;
+	height: 80px;
+	width: 40px;
+}
+.yes, .no{
+	border-radius: 4px;
+	color: #5070b0;
+	height: 36px;
+	margin: 2px;
+	width: 36px;	
+}
+.yes:hover, .no:hover{
+	background-color: #5070b0;
+	color: #fff;
+	cursor: pointer;	
+}
+.clear{
+	height: 5px;
+}
+.trash{
+	background-color: #fff;
+	background-image: url('../image/trash.png');
+	background-size: 100%;
+	border-radius: 4px;
+	float: right;
+	height: 36px;
+	margin: 2px;
+	width: 36px;
+}
+.trash:hover{
+	background-color: #5070b0;
+	background-image: url('../image/trashWhite.png');
+	cursor: pointer;
+}
+.personData{
+	background-color: #eaeaea;
+	float: right;
+	height: 80px;
+	width: 250px;
+}
+.firstName, .lastName{
+	height: 40px;
+	line-height: 40px;
+	padding: 0px 10px;
+}
+.firstName{
+	border-bottom: 1px solid #fff;
+}
+.lastName{
+	color: #5070b0;
+	font-weight: bold;
+}
+#addFriend{
+	background-color: #5070b0;
+	border-radius: 4px;
+	color: #fff;
+	font-size: 16px;
+	height: 40px;
+	margin: 5px;
+	width: 180px; 
+}
+#addFriend:hover{
+	background-color: #6080c0;
+	cursor: pointer;
 }

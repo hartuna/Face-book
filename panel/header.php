@@ -4,6 +4,7 @@
 		header('Location: ../');
 		exit();
 	}
+	$id = $_SESSION['id'];
 ?>
 <!DOCTYPE html>
 </html>
