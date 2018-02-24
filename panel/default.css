@@ -5,7 +5,7 @@
 	margin: 0px;
 	padding: 0px;
 }
-button{
+button, input{
 	border: none;
 	outline: none;
 }
@@ -39,7 +39,7 @@ header button:hover{
 #container{
 	margin: 10px auto;
 	min-height: 100px;
-	width: 1200px;
+	width: 1186px;
 }
 #activeFriends, #waitingForAccept, #sentInvitations{
 	background-color: #fff;
@@ -48,7 +48,7 @@ header button:hover{
 	float: left;
 	margin: 10px;
 	min-height: 100px;
-	width: 780px;
+	width: 766px;
 }
 #notYet{
 	float: right;
@@ -74,7 +74,13 @@ h3{
 	margin: 5px auto;
 	width: 370px;
 }
-.person img{
+.personAccept{
+	display: inline-block;
+	height: 80px;
+	margin: 5px;
+	width: 370px;
+}
+.person img, .personAccept img{
 	background-color: #5070b0;
 	float: left;
 	height: 80px;
@@ -133,7 +139,7 @@ h3{
 	color: #5070b0;
 	font-weight: bold;
 }
-#addFriend{
+#addFriend, #add{
 	background-color: #5070b0;
 	border-radius: 4px;
 	color: #fff;
@@ -142,7 +148,21 @@ h3{
 	margin: 5px;
 	width: 180px; 
 }
-#addFriend:hover{
+#addFriend:hover, #add:hover{
 	background-color: #6080c0;
 	cursor: pointer;
+}
+#addNewFriend{
+	display: none;
+}
+#newFriend{
+	background-color: #eaeaea;
+	font-size: 16px;
+	height: 40px;
+	margin: 5px;
+	padding: 0px 10px;
+	width: 370px;
+}
+#add{
+	width: 120px;
 }

@@ -7,10 +7,17 @@
 	$id = $_SESSION['id'];
 ?>
 <!DOCTYPE html>
-</html>
+<html>
 <head>
 	<title>Social-network</title>
 	<meta charset="utf-8" />
+	<?php
+	if($_SERVER['REQUEST_URI'] == '/social-network/panel/relations.php'){
+	?>
+	<script src="relations.js"></script>
+	<?php	
+	}
+	?>
 	<link href="default.css" rel="stylesheet" type="text/css" media="all" />
 </head>
 <body>
