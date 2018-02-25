@@ -1,17 +1,3 @@
-@charset 'utf-8';
-*{
-	box-sizing: border-box;
-	font-family: 'Verdana';
-	margin: 0px;
-	padding: 0px;
-}
-button, input{
-	border: none;
-	outline: none;
-}
-body{
-	background-color: #eaeaea;
-}
 @media all and (min-width: 1200px){
 	#container{
 		width: 1186px;
@@ -68,7 +54,7 @@ body{
 	.personData{
 		width: 150px;
 	}
-	.firstName, .lastName{
+	.firstName, .lastName, .firstNameAccept, .lastNameAccept{
 		font-size: 12px;
 	}
 	#newFriend{
@@ -111,6 +97,9 @@ header button{
 #logout{
 	background-image: url('../image/logOut.png');
 }
+#relations{
+	background-image: url('../image/relations.png');
+}
 header button:hover{
 	cursor: pointer;
 	background-color: rgba(255, 255, 255, 0.3);
@@ -125,7 +114,20 @@ header button:hover{
 #activeFriends{
 	float: left;
 	margin: 10px;
-	min-height: 100px;
+	min-height: 160px;
+}
+#search{
+	height: 40px;
+	margin: 10px 0px;
+	width: 100%;
+}
+#search input{
+	border-bottom: 1px solid #dadada;
+	font-size: 14px;
+	height: 40px;
+	margin: 0px 5%;
+	padding: 0px 10px;
+	width: 90%;
 }
 #notYet{
 	float: right;
@@ -200,15 +202,15 @@ h3{
 	float: right;
 	height: 80px;
 }
-.firstName, .lastName{
+.firstName, .firstNameAccept, .lastName, .lastNameAccept{
 	height: 40px;
 	line-height: 40px;
 	padding: 0px 10px;
 }
-.firstName{
+.firstName, .firstNameAccept{
 	border-bottom: 1px solid #fff;
 }
-.lastName{
+.lastName, .lastNameAccept{
 	color: #5070b0;
 	font-weight: bold;
 }

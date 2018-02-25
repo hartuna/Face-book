@@ -7,7 +7,7 @@ if(!isset($_POST['add'])){
 require_once '../connect.php';
 $connect = @new mysqli($dbServer, $dbUser, $dbPassword, $dbName);
 if(mysqli_connect_errno()){
-	$error = 'Brak połączenia z bazą';
+	$_SESSION['error'] = 'Brak połączenia z bazą';
 }
 else{
 	$connect->query('set names "utf8" collate "utf8_polish_ci"');
@@ -19,14 +19,14 @@ else{
 			$idNewFriend = $row['Id'];
 		}
 		else{
-			$error = 'Brak podanej osoby w bazie';
+			$_SESSION['error'] = 'Brak podanej osoby w bazie';
 		}
 		$result->close();
 	}
 	if($idNewFriend != $_SESSION['id']){
 		if($result = @$connect->query('SELECT Id FROM Relations WHERE (FirstPerson = ' . $idNewFriend . ' AND SecondPerson = ' . $_SESSION['id'] . ') OR (SecondPerson = ' . $idNewFriend . ' AND FirstPerson = ' . $_SESSION['id'] . ')'))	{
 			if($result->num_rows > 0){
-				$error = 'Relacja już została nawiązana';
+				$_SESSION['error'] = 'Relacja już została nawiązana';
 			}
 			else{
 				$result->close();
@@ -37,6 +37,9 @@ else{
 			}
 			$result->close();
 		}	
+	}
+	else if($idNewFriend == $_SESSION['id'] && isset($idNewFriend)){
+		$_SESSION['error'] = 'Zapraszasz sam siebie?';
 	}
 	$connect->close();
 	header('Location: ./relations.php');

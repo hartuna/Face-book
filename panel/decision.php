@@ -7,7 +7,7 @@ if(!isset($_POST['yes']) && !isset($_POST['no'])){
 require_once '../connect.php';
 $connect = @new mysqli($dbServer, $dbUser, $dbPassword, $dbName);
 if(mysqli_connect_errno()){
-	$error = 'Brak połączenia z bazą';
+	$_SESSION['error'] = 'Brak połączenia z bazą';
 }
 else{
 	$connect->query('set names "utf8" collate "utf8_polish_ci"');

@@ -11,12 +11,13 @@
 	<title>Social-network</title>
 	<meta charset="utf-8" />
 	<link href="login.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="main.css" rel="stylesheet" type="text/css" media="all" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<script src="login.js"></script>
 </head>
 <body>
 	<div id="error">
-		<p id="statement"><?php if(isset($_SESSION['error'])){ echo $_SESSION['error']; } ?></p>
+		<p id="statement"><?php if(isset($_SESSION['error'])){ echo $_SESSION['error']; unset($_SESSION['error']); } ?></p>
 	</div>
 	<div id="wrapper">
 		<form id="logOn" method="POST" action="login.php">

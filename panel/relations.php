@@ -11,6 +11,9 @@ else{
 ?>
 	<div id="container">
 		<div id="activeFriends">
+			<div id="search">
+				<input type="text" placeholder="Przeszukaj swoich znajomych" id="searchFriend">
+			</div>
 			<h3>Twoi znajomi</h3>
 			<?php
 			if(!isset($error)){
@@ -24,8 +27,8 @@ else{
 					<input type="submit" name="deleteActive" class="trash" value="">
 				</form>
 				<div class="personData">
-					<p class="firstName"><?php echo $person['FirstName']; ?></p>
-					<p class="lastName"><?php echo $person['LastName']; ?></p>
+					<p class="firstNameAccept"><?php echo $person['FirstName']; ?></p>
+					<p class="lastNameAccept"><?php echo $person['LastName']; ?></p>
 				</div>
 			</div>
 			<?php
