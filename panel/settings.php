@@ -28,10 +28,17 @@ else{
 }
 ?>
 	<div id="container">
-		<h1>Zbuduj swój awatar</h1>
-		<div id="avatar" <?php echo 'style="background-color: rgb(' . $background . ');"'; ?>></div>
+		<div id="profile">
+			<div id="avatar" <?php echo 'style="background-color: rgb(' . $background . ');"'; ?>></div>
+			<form action="./settings.php" method="POST">
+				<input id="color" type="hidden" name="color" value="32, 32, 32">
+				<input id="save" type="submit" name="changeColor" value="Zapisz zmiany">
+			</form>
+		</div>
 		<div id="sliders">
+			<h3>Wybierz kolor tła</h3>
 			<p class="value"><?php echo $red; ?></p>
+			<p class="colorText">Czerwony</p>
 			<div class="slide" id="red">
 				<?php
 				for($i = 0; $i < 7; $i++){
@@ -49,6 +56,7 @@ else{
 				?>
 			</div>
 			<p class="value"><?php echo $green; ?></p>
+			<p class="colorText">Zielony</p>
 			<div class="slide" id="green">
 				<?php
 				for($i = 0; $i < 7; $i++){
@@ -66,6 +74,7 @@ else{
 				?>
 			</div>
 			<p class="value"><?php echo $blue; ?></p>
+			<p class="colorText">Niebieski</p>
 			<div class="slide" id="blue">
 				<?php
 				for($i = 0; $i < 7; $i++){
@@ -83,10 +92,9 @@ else{
 				?>
 			</div>
 		</div>
-		<form action="./settings.php" method="POST">
-			<input id="color" type="hidden" name="color" value="32, 32, 32">
-			<input type="submit" name="changeColor" value="Zapisz">
-		</form>
+		<div id="logo">
+			<h3>Wybierz swoje logo</h3>
+		</div>
 	</div>
 </body>
 </html>

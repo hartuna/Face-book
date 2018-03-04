@@ -33,7 +33,7 @@ $id = $_SESSION['id'];
 	</div>
 	<header>
 		<a href="logout.php"><button id="logout"></button></a>
-		<a href="settings.php"><button></button></a>		
+		<a href="settings.php"><button id="settings"></button></a>		
 		<a href="relations.php"><button id="relations"></button></a>	
 	</header>
 	<div id="welcome">

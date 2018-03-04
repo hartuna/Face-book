@@ -2,7 +2,7 @@
 	#container{
 		width: 1186px;
 	}
-	#activeFriends{
+	#activeFriends, #logo{
 		width: 766px;
 	}
 	#notYet{
@@ -17,15 +17,41 @@
 	#newFriend{
 		width: 370px;	
 	}
+	#profile{
+		width: 1166px;
+	}
+	#sliders{
+		width: 380px;
+	}
+	.slide{
+		height: 50px;
+		margin: 10px 15px;
+		width: 350px;
+	}
+	.partSlideRed, .partSlideGreen, .partSlideBlue{
+		height: 42px;
+		margin: 4px;
+		width: 42px;
+	}
+	.partSlideRed:hover, .partSlideGreen:hover, .partSlideBlue:hover{
+		height: 44px;
+		margin: 3px;
+		width: 44px;
+	}
+	.activeSlide, .activeSlide:hover{
+		height: 48px;
+		margin: 1px;
+		width: 48px;
+	}
+	#save{
+		float: right;
+	}
 }
 @media all and (max-width: 1199px) and (min-width: 700px){
 	#container{
 		width: 680px;
 	}
-	#activeFriends{
-		width: 320px;
-	}
-	#notYet{
+	#activeFriends, #notYet, #logo{
 		width: 320px;
 	}
 	.person, .personAccept{
@@ -37,15 +63,41 @@
 	#newFriend{
 		width: 310px;	
 	}
+	#profile{
+		width: 660px;
+	}
+	#sliders{
+		width: 320px;
+	}
+	.slide{
+		height: 42px;
+		margin: 10px 13px;
+		width: 294px;
+	}
+	.partSlideRed, .partSlideGreen, .partSlideBlue{
+		height: 34px;
+		margin: 4px;
+		width: 34px;
+	}
+	.partSlideRed:hover, .partSlideGreen:hover, .partSlideBlue:hover{
+		height: 38px;
+		margin: 2px;
+		width: 38px;
+	}
+	.activeSlide, .activeSlide:hover{
+		height: 40px;
+		margin: 1px;
+		width: 40px;
+	}
+	#save{
+		float: right;
+	}
 }
 @media all and (max-width: 699px){
-	#container{
+	#container, #profile{
 		width: 300px;
 	}
-	#activeFriends{
-		width: 280px;
-	}
-	#notYet{
+	#activeFriends, #notYet, #profile, #logo{
 		width: 280px;
 	}
 	.person, .personAccept{
@@ -59,6 +111,32 @@
 	}
 	#newFriend{
 		width: 270px;	
+	}
+	#sliders{
+		width: 280px;
+	}
+	.slide{
+		height: 36px;
+		margin: 10px 14px;
+		width: 252px;
+	}
+	.partSlideRed, .partSlideGreen, .partSlideBlue{
+		height: 30px;
+		margin: 3px;
+		width: 30px;
+	}
+	.partSlideRed:hover, .partSlideGreen:hover, .partSlideBlue:hover{
+		height: 32px;
+		margin: 2px;
+		width: 32px;
+	}
+	.activeSlide, .activeSlide:hover{
+		height: 34px;
+		margin: 1px;
+		width: 34px;
+	}
+	#save{
+		float: left;
 	}
 }
 header{
@@ -94,6 +172,9 @@ header button{
 }
 #logout{
 	background-image: url('../image/logOut.png');
+}
+#settings{
+	background-image: url('../image/settings.png');
 }
 #relations{
 	background-image: url('../image/relations.png');
@@ -155,6 +236,7 @@ h3{
 	margin: 5px;
 }
 .person img, .personAccept img{
+	border: 6px solid #eaeaea;;
 	float: left;
 	height: 80px;
 	width: 80px;
@@ -211,7 +293,7 @@ h3{
 	color: #5070b0;
 	font-weight: bold;
 }
-#addFriend, #add{
+#addFriend, #add, #save{
 	background-color: #5070b0;
 	border-radius: 4px;
 	color: #fff;
@@ -220,7 +302,7 @@ h3{
 	margin: 5px;
 	width: 180px; 
 }
-#addFriend:hover, #add:hover{
+#addFriend:hover, #add:hover, #save:hover{
 	background-color: #6080c0;
 	cursor: pointer;
 }
@@ -240,35 +322,42 @@ h3{
 /*
 Settings
 */
+#profile{
+	background-color: #fff;
+	float: left;
+	min-height: 160px;
+	margin: 10px;
+}
 #avatar{
-	height: 100px;
-	width: 100px;
+	float: left;
+	height: 150px;
+	margin: 5px;
+	width: 150px;
+}
+.clear{
+	clear: both;
 }
 #sliders{
-	height: 350px;
-	width: 350px;
+	background-color: #fff;
+	float: left;
+	margin: 10px;
 }
-.slide{
-	height: 50px;
-	width: 100%;
+.colorText{
+	border-bottom: 1px solid #dadada;
+	height: 30px;
+	line-height: 30px;
+	margin: 10px 2%;
+	width: 96%;
 }
 .partSlideRed, .partSlideGreen, .partSlideBlue{
 	border-radius: 4px;
 	float: left;
-	height: 42px;
-	margin: 4px;
-	width: 42px;
 }
 .partSlideRed:hover, .partSlideGreen:hover, .partSlideBlue:hover{
 	cursor: pointer;
-	height: 44px;
-	margin: 3px;
-	width: 44px;
 }
-.activeSlide, .activeSlide:hover{
-	height: 48px;
-	margin: 1px;
-	width: 48px;
+.value{
+	display: none;
 }
 .partSlideRed:nth-of-type(1){
 	background-color: rgb(32, 0, 0);
@@ -333,4 +422,9 @@ Settings
 .partSlideBlue:nth-of-type(7){
 	background-color: rgb(0, 0, 224);
 }
-
+#logo{
+	background-color: #fff;
+	float: right;
+	height: 200px;
+	margin: 10px;
+}
