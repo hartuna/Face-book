@@ -17,11 +17,11 @@ else{
 			<h3>Twoi znajomi</h3>
 			<?php
 			if(!isset($error)){
-				$result = @$connect->query("SELECT Users.Id, Users.FirstName, Users.LastName FROM Users CROSS JOIN Relations WHERE (Users.Id = Relations.FirstPerson AND Relations.Status = 'accept' AND Relations.SecondPerson = '$id') OR (Users.Id = Relations.SecondPerson AND Relations.Status = 'accept' AND Relations.FirstPerson = '$id') ORDER BY Users.FirstName");
+				$result = @$connect->query("SELECT Users.Id, Users.FirstName, Users.LastName, Users.Color FROM Users CROSS JOIN Relations WHERE (Users.Id = Relations.FirstPerson AND Relations.Status = 'accept' AND Relations.SecondPerson = '$id') OR (Users.Id = Relations.SecondPerson AND Relations.Status = 'accept' AND Relations.FirstPerson = '$id') ORDER BY Users.FirstName");
 				while($person = mysqli_fetch_array($result)){
 			?>
 			<div class="personAccept">
-				<img src="../image/logo.png" alt="" />
+				<img <?php echo 'style="background-color: rgb(' . $person['Color'] . ');"'; ?> src="../image/logo.png" alt="" />
 				<form action="./delete.php" method="POST">
 					<input type="hidden" name="id" <?php echo 'value="' . $person['Id'] . '"'; ?>>
 					<input type="submit" name="deleteActive" class="trash" value="">
@@ -42,11 +42,11 @@ else{
 				<h3>Oczekujące na akceptację</h3>
 				<?php
 				if(!isset($error)){
-					$result = @$connect->query("SELECT Users.FirstName, Users.LastName, Relations.Id FROM Users INNER JOIN Relations ON Users.Id = Relations.FirstPerson WHERE Relations.SecondPerson = '$id' AND Relations.Status = 'wait'");
+					$result = @$connect->query("SELECT Users.FirstName, Users.LastName, Users.Color, Relations.Id FROM Users INNER JOIN Relations ON Users.Id = Relations.FirstPerson WHERE Relations.SecondPerson = '$id' AND Relations.Status = 'wait'");
 					while($person = mysqli_fetch_array($result)){
 				?>
 				<div class="person">
-					<img src="../image/logo.png" alt="" />
+					<img <?php echo 'style="background-color: rgb(' . $person['Color'] . ');"'; ?> src="../image/logo.png" alt="" />
 					<form action="./decision.php" method="POST">
 						<div class="decision">
 							<input type="hidden" name="id" <?php echo 'value="' . $person['Id'] . '"'; ?>>
@@ -70,11 +70,11 @@ else{
 				<h3>Wysłane zaproszenia</h3>
 				<?php
 				if(!isset($error)){
-					$result = @$connect->query("SELECT Users.FirstName, Users.LastName, Relations.Id FROM Users INNER JOIN Relations ON Users.Id = Relations.SecondPerson WHERE Relations.FirstPerson = '$id' AND Relations.Status = 'wait'");
+					$result = @$connect->query("SELECT Users.FirstName, Users.LastName, Users.Color, Relations.Id FROM Users INNER JOIN Relations ON Users.Id = Relations.SecondPerson WHERE Relations.FirstPerson = '$id' AND Relations.Status = 'wait'");
 					while($person = mysqli_fetch_array($result)){
 				?>
 				<div class="person">
-					<img src="../image/logo.png" alt="" />
+					<img <?php echo 'style="background-color: rgb(' . $person['Color'] . ');"'; ?> src="../image/logo.png" alt="" />
 					<form action="./delete.php" method="POST">
 						<input type="hidden" name="id" <?php echo 'value="' . $person['Id'] . '"'; ?>>
 						<input type="submit" name="delete" class="trash" value="">

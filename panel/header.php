@@ -20,6 +20,11 @@ $id = $_SESSION['id'];
 	<script src="relations.js"></script>
 	<?php	
 	}
+	else{
+	?>
+	<script src="settings.js"></script>
+	<?php
+	}
 	?>
 </head>
 <body>

@@ -69,16 +69,14 @@ header{
 #welcome{
 	background-color: #fff;
 	border: 2px solid #5070b0;
-	border-left: none;
 	border-top: none;
-	border-radius: 0px 0px 4px 0px;
-	display: inline-block;
-	height: 30px;
-	width: 200px;
+	height: 34px;
+	width: 280px;
+	margin: auto;
 }
 #welcome p{
 	font-size: 16px;
-	line-height: 28px;
+	line-height: 32px;
 	text-align: center;
 }
 #welcome p span{
@@ -91,7 +89,7 @@ header button{
 	border-radius: 4px;
 	float: right;
 	height: 50px;
-	margin: 5px;
+	margin: 5px 2px;
 	width: 50px;
 }
 #logout{
@@ -157,7 +155,6 @@ h3{
 	margin: 5px;
 }
 .person img, .personAccept img{
-	background-color: #5070b0;
 	float: left;
 	height: 80px;
 	width: 80px;
@@ -240,3 +237,100 @@ h3{
 #add{
 	width: 120px;
 }
+/*
+Settings
+*/
+#avatar{
+	height: 100px;
+	width: 100px;
+}
+#sliders{
+	height: 350px;
+	width: 350px;
+}
+.slide{
+	height: 50px;
+	width: 100%;
+}
+.partSlideRed, .partSlideGreen, .partSlideBlue{
+	border-radius: 4px;
+	float: left;
+	height: 42px;
+	margin: 4px;
+	width: 42px;
+}
+.partSlideRed:hover, .partSlideGreen:hover, .partSlideBlue:hover{
+	cursor: pointer;
+	height: 44px;
+	margin: 3px;
+	width: 44px;
+}
+.activeSlide, .activeSlide:hover{
+	height: 48px;
+	margin: 1px;
+	width: 48px;
+}
+.partSlideRed:nth-of-type(1){
+	background-color: rgb(32, 0, 0);
+}
+.partSlideRed:nth-of-type(2){
+	background-color: rgb(64, 0, 0);
+}
+.partSlideRed:nth-of-type(3){
+	background-color: rgb(96, 0, 0);
+}
+.partSlideRed:nth-of-type(4){
+	background-color: rgb(128, 0, 0);
+}
+.partSlideRed:nth-of-type(5){
+	background-color: rgb(160, 0, 0);
+}
+.partSlideRed:nth-of-type(6){
+	background-color: rgb(192, 0, 0);
+}
+.partSlideRed:nth-of-type(7){
+	background-color: rgb(224, 0, 0);
+}
+.partSlideGreen:nth-of-type(1){
+	background-color: rgb(0, 32, 0);
+}
+.partSlideGreen:nth-of-type(2){
+	background-color: rgb(0, 64, 0);
+}
+.partSlideGreen:nth-of-type(3){
+	background-color: rgb(0, 96, 0);
+}
+.partSlideGreen:nth-of-type(4){
+	background-color: rgb(0, 128, 0);
+}
+.partSlideGreen:nth-of-type(5){
+	background-color: rgb(0, 160, 0);
+}
+.partSlideGreen:nth-of-type(6){
+	background-color: rgb(0, 192, 0);
+}
+.partSlideGreen:nth-of-type(7){
+	background-color: rgb(0, 224, 0);
+}
+.partSlideBlue:nth-of-type(1){
+	background-color: rgb(0, 0, 32);
+}
+.partSlideBlue:nth-of-type(2){
+	background-color: rgb(0, 0, 64);
+}
+.partSlideBlue:nth-of-type(3){
+	background-color: rgb(0, 0, 96);
+}
+.partSlideBlue:nth-of-type(4){
+	background-color: rgb(0, 0, 128);
+}
+.partSlideBlue:nth-of-type(5){
+	background-color: rgb(0, 0, 160);
+}
+.partSlideBlue:nth-of-type(6){
+	background-color: rgb(0, 0, 192);
+}
+.partSlideBlue:nth-of-type(7){
+	background-color: rgb(0, 0, 224);
+}
+
