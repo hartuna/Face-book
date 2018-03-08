@@ -8,6 +8,11 @@ window.onload = function(){
 		green.children[index].addEventListener('click', function(){color(index, 'green')});
 	    blue.children[index].addEventListener('click', function(){color(index, 'blue')});
 	}
+	var avatar = document.getElementById('chooseLogo');
+	for (var i = 0; i < 8; i++){
+		let index = i;
+		avatar.children[index].addEventListener('click', function(){chooseLogo(index)});
+	}
 }
 function color(number, color){
 	var value = document.getElementsByClassName('value');
@@ -65,4 +70,15 @@ function chooseColor(valueNow, valueNext, color){
 		var toSave = document.getElementById('color');
 		toSave.value = value[0].textContent + ', ' + value[1].textContent + ', ' + value[2].textContent;
 	}	
+}
+function chooseLogo(index){
+	var active = document.getElementsByClassName('avatar activeAvatar');
+	var next = document.getElementsByClassName('avatar');
+	var showAvatar = document.getElementById('cos');
+	var toSave = document.getElementById('avatarNumber');
+	active[0].className = 'avatar';
+	next[index].className = 'avatar activeAvatar';
+	index++;
+	showAvatar.src = '../image/avatar' + index + '.png';
+	toSave.value = index;
 }

@@ -46,54 +46,70 @@
 	#save{
 		float: right;
 	}
+	#chooseLogo{
+		width: 760px;
+	}
+	.avatar{
+		height: 100px;
+		margin: 20px 45px;
+		width: 100px;
+	}
 }
-@media all and (max-width: 1199px) and (min-width: 700px){
+@media all and (max-width: 1199px) and (min-width: 600px){
 	#container{
-		width: 680px;
+		width: 580px;
 	}
 	#activeFriends, #notYet, #logo{
-		width: 320px;
+		width: 270px;
 	}
 	.person, .personAccept{
-		width: 310px;	
+		width: 260px;	
 	}
 	.personData{
-		width: 190px;
+		width: 140px;
 	}
 	#newFriend{
-		width: 310px;	
+		width: 260px;	
 	}
 	#profile{
-		width: 660px;
+		width: 560px;
 	}
 	#sliders{
-		width: 320px;
+		width: 270px;
 	}
 	.slide{
-		height: 42px;
-		margin: 10px 13px;
-		width: 294px;
+		height: 34px;
+		margin: 10px 6px;
+		width: 238px;
 	}
 	.partSlideRed, .partSlideGreen, .partSlideBlue{
-		height: 34px;
+		height: 26px;
 		margin: 4px;
-		width: 34px;
+		width: 26px;
 	}
 	.partSlideRed:hover, .partSlideGreen:hover, .partSlideBlue:hover{
-		height: 38px;
+		height: 30px;
 		margin: 2px;
-		width: 38px;
+		width: 30px;
 	}
 	.activeSlide, .activeSlide:hover{
-		height: 40px;
+		height: 32px;
 		margin: 1px;
-		width: 40px;
+		width: 32px;
 	}
 	#save{
 		float: right;
 	}
+	#chooseLogo{
+		width: 260px;
+	}
+	.avatar{
+		height: 100px;
+		margin: 20px 15px;
+		width: 100px;
+	}
 }
-@media all and (max-width: 699px){
+@media all and (max-width: 599px){
 	#container, #profile{
 		width: 300px;
 	}
@@ -138,6 +154,14 @@
 	#save{
 		float: left;
 	}
+	#chooseLogo{
+		width: 260px;
+	}
+	.avatar{
+		height: 100px;
+		margin: 20px 15px;
+		width: 100px;
+	}
 }
 header{
 	background-color: #305090;
@@ -168,6 +192,7 @@ header button{
 	float: right;
 	height: 50px;
 	margin: 5px 2px;
+	position: relative;
 	width: 50px;
 }
 #logout{
@@ -182,6 +207,18 @@ header button{
 header button:hover{
 	cursor: pointer;
 	background-color: rgba(255, 255, 255, 0.3);
+}
+header .count{
+	background-color: #bb2020;
+	bottom: -2px;
+	border-radius: 4px;
+	color: #fff;
+	font-size: 14px;
+	height: 20px;
+	left: -2px;
+	line-height: 20px;
+	padding: 0px 6px;
+	position: absolute;
 }
 #container{
 	margin: 10px auto;
@@ -425,6 +462,27 @@ Settings
 #logo{
 	background-color: #fff;
 	float: right;
-	height: 200px;
+	min-height: 200px;
 	margin: 10px;
+}
+#chooseLogo{
+	margin: auto;
+}
+.avatar{
+	background-color: #5070b0;
+	border-radius: 4px;
+	float: left;
+}
+.avatar:hover{
+	background-color: #6080c0;
+	cursor: pointer;
+}
+.activeAvatar{
+	background-color: #202020;
+}
+.activeAvatar:hover{
+	background-color: #202020;
+}
+.avatar img{
+	width: 100%;
 }
